@@ -1,0 +1,33 @@
+:root {
+	--white: hsl(0, 0%, 100%);
+	--black: hsl(0, 0%, 0%);
+	--dark: hsl(40,100%,10%);
+	--lt-olive: hsl(88,16%,52%);
+	--dk-olive: hsl(82,37%,25%);
+	--burlywood: hsl(24,60%,75%);
+	--brown: hsl(37,96%,23%);
+	--dim-gray: hsl(0,0%,32%);
+}
+
+h2 {
+	color: var(--lt-olive);
+}
+
+.description {
+	background-color: var(--dim-gray);
+	h2 {
+		color: var(--white);
+		span {
+			  animation: glow 1s ease-in-out infinite alternate;
+	
+			@-webkit-keyframes glow {
+			from {
+				text-shadow: 0 0 10px var(--white), 0 0 20px var(--white), 0 0 30px var(--dim-gray), 0 0 40px var(--dim-gray);
+			}
+			to {
+				text-shadow: 0 0 20px var(--white), 0 0 30px var(--white), 0 0 40px var(--dim-gray), 0 0 50px var(--dim-gray);
+			}
+			}  
+	}
+	}
+}

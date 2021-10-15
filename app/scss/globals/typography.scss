@@ -1,0 +1,52 @@
+@use '../util' as *;
+
+body {
+	font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3 {
+	margin-top: 0;
+	line-height: 1.1;
+	font-family: var(--font-heading);
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+a,
+a:visited,
+a:active {
+	text-decoration: none;
+}
+
+h1 {
+	color: var(--dark);
+	font-size: rem(80);
+}
+
+h2 {
+	font-size: rem(38);
+}
+
+p {
+	line-height: 1.4;
+}
+
+.description {
+	h2 {
+		font-size: rem(48);
+	}
+}
+
+.subtitle {
+	font-family: var(--font-sub);
+	font-size: rem(40);
+}
+
+#passion,
+#creators {
+	p {
+		font-size: rem(20);
+	}
+}
