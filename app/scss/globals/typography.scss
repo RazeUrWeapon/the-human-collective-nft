@@ -23,10 +23,16 @@ a:active {
 h1 {
 	color: var(--dark);
 	font-size: rem(80);
+	@include breakpoint-down(small) {
+		font-size: rem(45);
+	}
 }
 
 h2 {
 	font-size: rem(38);
+	@include breakpoint-down(small) {
+		font-size: rem(32);
+	}
 }
 
 p {
@@ -36,12 +42,18 @@ p {
 .description {
 	h2 {
 		font-size: rem(48);
+		@include breakpoint-down(small) {
+			font-size: rem(38);
+		}
 	}
 }
 
 .subtitle {
 	font-family: var(--font-sub);
 	font-size: rem(40);
+	@include breakpoint-down(small) {
+		font-size: rem(24);
+	}
 }
 
 #passion,

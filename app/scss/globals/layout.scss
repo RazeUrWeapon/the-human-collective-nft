@@ -1,15 +1,5 @@
 @use '../util' as *;
 
-// .container {
-// 	padding: 0 rem(24);
-// 	max-width: rem(1110);
-// 	margin: 0 auto;
-
-// 	@include breakpoint(large) {
-// 		padding: 0;
-// 		transform: translate(0, 0);
-// 	}
-// }
 * {
 	margin: 0;
 	padding: 0;
@@ -39,11 +29,9 @@ div {
 
 section {
 	padding: rem(48);
-}
-// Temporary Image
-img {
-	width: 100%;
-	max-width: rem(1024);
+	@include breakpoint-down(small) {
+		padding: rem(45) rem(24);
+	}
 }
 
 .description {
@@ -62,18 +50,32 @@ img {
 #benefits {
 	display: flex;
 	justify-content: center;
+	@include breakpoint-down(small) {
+		padding-top: 0;
+	}
 }
 
 .benefits {
+	@include breakpoint-down(small) {
+		display: flex;
+		flex-direction: column;
+	}
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	column-gap: rem(56);
 	p {
 		text-align: justify;
+		@include breakpoint-down(small) {
+			text-align: center;
+		}
 	}
 	&__movement {
 		display: grid;
 		grid-template-rows: 1fr 2fr;
+		@include breakpoint-down(small) {
+			display: flex;
+			flex-direction: column;
+		}
 		h2 {
 			grid-row: 1;
 		}
@@ -84,11 +86,37 @@ img {
 	&__growth {
 		display: grid;
 		grid-template-rows: 1fr 2fr;
+		@include breakpoint-down(small) {
+			display: flex;
+			flex-direction: column;
+		}
 		h2 {
 			grid-row: 1;
+			@include breakpoint-down(small) {
+				padding-top: rem(45);
+			}
 		}
 		p {
 			grid-row: 2;
+		}
+	}
+}
+
+.roadmap {
+	&__desktop {
+		width: 100%;
+		max-width: rem(1024);
+		@include breakpoint-down(small) {
+			display: none;
+		}
+	}
+
+	&__mobile {
+		display: none;
+		@include breakpoint-down(small) {
+			display: flex;
+			margin: auto;
+			width: 100%;
 		}
 	}
 }
@@ -98,4 +126,18 @@ img {
 	display: flex;
 	justify-content: center;
 	padding: rem(48);
+	@include breakpoint-down(small) {
+		padding: 0 rem(24) rem(45);
+	}
+	p {
+		@include breakpoint-down(small) {
+			font-size: rem(16);
+		}
+	}
+}
+
+#roadmap {
+	@include breakpoint-down(small) {
+		padding: 0 rem(10) rem(45);
+	}
 }
